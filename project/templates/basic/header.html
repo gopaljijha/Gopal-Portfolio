@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+<style>
+
+/* # General
+================================ */
+body {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+/* # Header, Main Menu
+================================ */
+.navbar {
+  opacity: 0.8;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.671);
+  transition: all 0.2s ease-out;
+}
+
+.navbar-container {
+	position: relative;
+}
+
+.navbar .navbar-nav li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ff9100;
+  transition: all 0.2s ease-out;
+}
+.navbar .navbar-nav li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ff9100;
+  transition: all 0.2s ease-out;
+}
+
+
+.navbar-brand {
+  font-size: 25px;
+  transition: all 0.2s ease-out;
+	color: rgba(255, 128, 0, 0.8);
+}
+
+.navbar-scroll {
+  opacity: 1;
+}
+
+
+
+@media (min-width: 768px) {
+  .navbar {
+    height: 100px;
+  }
+
+  .navbar-nav>li>a {
+    padding: 0;
+    margin-top: 35px;
+    margin-left: 50px;
+    line-height: 70px;
+  }
+  .navbar-brand {
+    font-size: 28px;
+    padding: 0;
+    height: 120px;
+    line-height: 120px;
+  }
+
+  /* Navbar when scrolled */
+  .navbar-scroll {
+    height: 60px;
+  }
+
+  .navbar-scroll .navbar-brand {
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .navbar-scroll .navbar-nav>li>a {
+    opacity: 1;
+    padding: 0;
+    margin-top: 0;
+  }
+
+}
+
+ /* ---------------------New Effect ------------------------------------- */
+
+#main-navbar li a:hover {
+  /* border-bottom: 1px solid rgb(28, 121, 184); */
+  color: rgb(0, 132, 255); /*hover after effect for header text*/
+  transition: 0.5s;
+  /* -webkit-transition: all 1s ease; */
+}
+
+/* Animated Bottom Line */
+#main-navbar li a:before, #main-navbar li a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  /* height: 0px;
+  bottom: -10px; */
+  background: rgb(4, 255, 0); /*Effect below text   */
+}
+
+#main-navbar li a:before {
+  left: 0;
+  transition: 0.5s;
+}
+
+#main-navbar li a:after {
+  background: rgb(0, 132, 255);
+  right: 0;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+#main-navbar li a:hover:before {
+  background: rgb(57, 2, 255); /*Line colour below text;  Blue is best*/
+  width: 100%;
+  transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+}
+
+#main-navbar li a:hover:after {
+  background: transparent;
+  width: 100%;
+  /* transition: 0s; */
+}
+
+</style>
+
+</head>
+<body>
+  <header>
+		<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+			<div class="container navbar-container">
+				<div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav nav navbar-left">
+              <li><a href="/" style="font: bold 46px 'Cookie', cursive; text-transform:none; top: -10px;">Gopalji Creation</a></li>
+            </ul>
+
+            
+          
+					<ul class="nav navbar-nav navbar-center">
+						<li><a href="/" class="nav-item nav-link active" style="font: bold 20px 'italic', cursive; top: 0px;">Home</a></li>
+						<li><a href="{% url 'about' %}" class="nav-item nav-link" style="font: bold 20px 'italic', cursive; top: 0px;">About</a></li>
+						<li><a href="{% url 'product' %}" class="nav-item nav-link" style="font: bold 20px 'italic', cursive; top: 0px;">Product</a></li>
+						<li><a href="{% url 'news' %}" class="nav-item nav-link" style="font: bold 20px 'italic', cursive; top: 0px;">News</a></li>
+            <li><a href="{% url 'portfolio' %}" style="font: bold 30px 'Cookie', cursive; top: 0px; color:  #00ccff;">Portfolio</a></li>
+          </li>
+					</ul>
+				</div>
+
+			</div>
+		</nav>
+	</header>
+
+
+<script>
+  $(window).scroll(function () {
+	var sc = $(window).scrollTop()
+	if (sc > 150) {
+		$("#main-navbar").addClass("navbar-scroll")
+	} 
+	else {
+		$("#main-navbar").removeClass("navbar-scroll")
+	}
+});
+</script>
+</body>
+</html>

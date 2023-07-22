@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+<style>
+
+/* # General
+================================ */
+body {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+
+ /* ---------------------New Effect ------------------------------------- */
+#main-navbar li a:hover {
+  color: rgb(216, 40, 13); /*hover after effect for header text*/
+  transition: 0.2s;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    opacity: 0.8;
+    margin-bottom: 0;
+    background-color: rgba(73, 73, 79, 0.098);
+    transition: all 0.2s ease-out;
+ }
+
+  .navbar-container {
+    position: relative;
+  }
+
+  .navbar .navbar-nav li a {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #0054fc;
+    transition: all 0.2s ease-out;
+    display: inline;
+  }
+
+  .navbar {
+    height: 80px;
+  }
+
+  .navbar-nav>li>a {
+    padding: 0;
+    margin-top: 15px;
+    margin-left: 10px;
+    line-height: 40px;
+  }
+
+  .navbar-nav>li {
+    display: inline;
+  }
+
+  .navbar-brand {
+    font-size: 10px;
+    padding: 0;
+    height: 50px;
+    line-height: 50px;
+
+  }
+
+  /* Navbar when scrolled */
+  .navbar-scroll {
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .navbar-scroll .navbar-brand {
+    height: 20px;
+    line-height: 20px;
+  }
+
+  .navbar-scroll .navbar-nav>li>a {
+    opacity: 1;
+    padding: 0;
+    margin-top: 0;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  .navbar {
+    opacity: 0.8;
+    margin-bottom: 0;
+    background-color: rgba(73, 73, 79, 0.098);
+    transition: all 0.2s ease-out;
+ }
+
+  .navbar-container {
+    position: relative;
+  }
+
+  .navbar .navbar-nav li a {
+    font-size: 18px;
+    color: #0054fc;
+    transition: all 0.2s ease-out;
+    display: inline;
+    margin-left: 35px;
+  }
+
+  .navbar {
+    height: 80px;
+  }
+
+  .navbar-nav>li>a {
+    padding: 0;
+    margin-top: 15px;
+    margin-left: 10px;
+    line-height: 40px;
+    /* display: inline; */
+  }
+
+  .navbar-nav>li {
+    display: inline;
+  }
+
+  .navbar-brand {
+    font-size: 10px;
+    padding: 0;
+    height: 50px;
+    line-height: 10px;
+
+  }
+
+  /* Navbar when scrolled */
+  .navbar-scroll {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.651);
+
+  }
+
+  .navbar-scroll .navbar-brand {
+    height: 20px;
+    line-height: 20px;
+  }
+
+  .navbar-scroll .navbar-nav>li>a {
+    opacity: 1;
+    padding: 0;
+    margin-top: 0;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  .navbar {
+    opacity: 0.8;
+    margin-bottom: 0;
+    background-color: rgba(73, 73, 79, 0.098);
+    transition: all 0.2s ease-out;
+ }
+
+  .navbar-container {
+    position: relative;
+  }
+
+  .navbar .navbar-nav li a {
+    font-size: 18px;
+    color: #0054fc;
+    transition: all 0.2s ease-out;
+  }
+
+  .navbar {
+    height: 100px;
+  }
+
+  .navbar-nav>li>a {
+    padding: 0;
+    margin-top: 35px;
+    margin-left: 50px;
+    line-height: 70px;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+    padding: 0;
+    height: 120px;
+    line-height: 120px;
+
+  }
+
+  /* Navbar when scrolled */
+  .navbar-scroll {
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .navbar-scroll .navbar-brand {
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .navbar-scroll .navbar-nav>li>a {
+    opacity: 1;
+    padding: 0;
+    margin-top: 0;
+  }
+  
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+  .navbar {
+    opacity: 0.8;
+    margin-bottom: 0;
+    background-color: rgba(73, 73, 79, 0.098);
+    transition: all 0.2s ease-out;
+ }
+
+  .navbar-container {
+    position: relative;
+  }
+
+  .navbar .navbar-nav li a {
+    font-size: 24px;
+    color: #0054fc;
+    transition: all 0.2s ease-out;
+  }
+
+  .navbar {
+    height: 100px;
+  }
+
+  .navbar-nav>li>a {
+    padding: 0;
+    margin-top: 35px;
+    margin-left: 50px;
+    line-height: 70px;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+    padding: 0;
+    height: 120px;
+    line-height: 120px;
+
+  }
+
+  /* Navbar when scrolled */
+  .navbar-scroll {
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .navbar-scroll .navbar-brand {
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .navbar-scroll .navbar-nav>li>a {
+    opacity: 1;
+    padding: 0;
+    margin-top: 0;
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    opacity: 0.8;
+    margin-bottom: 0;
+    background-color: rgba(73, 73, 79, 0.098);
+    transition: all 0.2s ease-out;
+ }
+
+  .navbar-container {
+    position: relative;
+  }
+
+  .navbar .navbar-nav li a {
+    font-size: 26px;
+    color: #0054fc;
+    transition: all 0.2s ease-out;
+  }
+
+  .navbar {
+    height: 100px;
+  }
+
+  .navbar-nav>li>a {
+    padding: 0;
+    margin-top: 35px;
+    margin-left: 50px;
+    line-height: 70px;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+    padding: 0;
+    height: 120px;
+    line-height: 120px;
+
+  }
+
+  /* Navbar when scrolled */
+  .navbar-scroll {
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .navbar-scroll .navbar-brand {
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .navbar-scroll .navbar-nav>li>a {
+    opacity: 1;
+    padding: 0;
+    margin-top: 0;
+  }
+}
+
+
+</style>
+
+</head>
+<body>
+  <header>
+		<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+            <!-- <ul class="navbar-nav nav navbar-left">
+              <li><a href="/">Gopalji Creation</a></li>
+            </ul> -->
+          
+					<ul class="navbar-nav nav navbar-center">
+            <li><a href="/">Gopalji Creation</a></li>
+            <li><a href="{% url 'portfolioAbout' %}">About</a></li>
+						<li><a href="{% url 'portfolioSkills' %}">Skills</a></li>
+						<li><a href="{% url 'portfolioProjects' %}">Projects</a></li>
+						<li><a href="{% url 'portfolioResume' %}">Resume</a></li>
+            <li><a href="{% url 'portfolioContactUs' %}">Contact</a></li>
+						</li>
+					</ul> 
+				
+
+			</div>
+		</nav>
+
+	</header>
+
+
+<script>
+  $(window).scroll(function () {
+	var sc = $(window).scrollTop()
+	if (sc > 150) {
+		$("#main-navbar").addClass("navbar-scroll")
+	} 
+	else {
+		$("#main-navbar").removeClass("navbar-scroll")
+	}
+});
+</script>
+</body>
+</html>

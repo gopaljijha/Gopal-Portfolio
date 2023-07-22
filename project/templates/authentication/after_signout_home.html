@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ 
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+    /* Default body height to keep footer at bottom of page */
+    .body-height{
+      height: 190px;
+    }
+    .button-box {
+      text-align: center;
+  display: block;
+  position: relative;
+  margin: 8px 40px;
+}
+.btn {
+  cursor: pointer;
+  text-align: center;
+  width: 30%;
+  padding:0 18px; 
+  background: #3897f0;
+  border:1px solid #3897f0;
+  color:#fff;
+  font-weight:600;
+  font-size: 18px;
+  height: 38px;
+}
+
+  </style>
+ 
+</head>
+<body>
+{% include "basic/header.html" %} 
+
+<div class="body-height">
+  
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+    {% endfor %}
+
+    <h3>Welcome to Gopalji Creation</h3>
+
+
+    <!-- {% if user.is_authenticated %}
+    <h3>Hello {{fname}}!</h3>
+    <h4>You're successfully logged in.</h4>
+    <button type="submit"><a href="{% 'basic/index' %}">SignOut</a></button>
+    {% else %}
+    <button type="submit"><a href="{% 'authentication/signup_authentication' %}">SignUp</a></button>
+    <br/>
+    <br/>
+    <button type="submit"><a href="{% 'authentication/signin_authentication' %}">SignIn</a></button>
+    {% endif %} -->
+
+  
+
+  <!-- <button type="submit"><a href="authentication/signup_authentication">Sign Up</a></button> -->
+
+  <!-- <button type="Test Auth"><a href="authentication/testAuth">Sign Up</a></button> -->
+  <!-- <button type="submit"><a href="basic/index">Sign out</a></button> -->
+    
+  
+</div>
+
+{% include "basic/footer.html" %}
+</body>
+ 
+</html>

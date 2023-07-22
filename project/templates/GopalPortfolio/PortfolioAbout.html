@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio About</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+  <style> 
+  body{
+    background-color: rgba(73, 73, 79, 0.098);
+  }
+  
+  /* === BASE HEADING === */ 
+  h1 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+        
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .about-paragraph {
+    color: rgb(8, 8, 214);
+    text-transform: none;
+    font-family: cursive; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: justify;
+    letter-spacing: 2px;   
+  }
+
+  .title-header h1 {
+  font-size:26px; font-weight:700; letter-spacing:1px; 
+  text-transform:uppercase; 
+  width:160px; text-align:center; 
+  margin:auto; white-space:nowrap; padding-bottom:13px;
+  }
+
+.title-header h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.title-header h1:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+  position:absolute; right:0; bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  .about-paragraph {
+    color: rgb(8, 8, 214);
+    text-transform: none;
+    font-family: cursive; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: justify;
+    letter-spacing: 2px;   
+  }
+
+  .title-header h1 {
+  font-size:26px; font-weight:700; letter-spacing:1px; 
+  text-transform:uppercase; 
+  width:160px; text-align:center; 
+  margin:auto; white-space:nowrap; padding-bottom:13px;
+  }
+
+.title-header h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.title-header h1:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+  position:absolute; right:0; bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .about-paragraph {
+    color: rgb(8, 8, 214);
+    text-transform: none;
+    font-family: cursive; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: justify;
+    letter-spacing: 2px;   
+  }
+
+  .title-header h1 {
+  font-size:26px; font-weight:700; letter-spacing:1px; 
+  text-transform:uppercase; 
+  width:160px; text-align:center; 
+  margin:auto; white-space:nowrap; padding-bottom:13px;
+  }
+
+.title-header h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.title-header h1:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+  position:absolute; right:0; bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+  
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .about-paragraph {
+    color: rgb(8, 8, 214);
+    text-transform: none;
+    font-family: cursive; 
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: justify;
+    letter-spacing: 2px;   
+    }
+
+  .title-header h1 {
+  font-size:26px; font-weight:700; letter-spacing:1px; 
+  text-transform:uppercase; 
+  width:160px; text-align:center; 
+  margin:auto; white-space:nowrap; padding-bottom:13px;
+}
+.title-header h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.title-header h1:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+  position:absolute; right:0; bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+
+  
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  .about-paragraph {
+    color: rgb(8, 8, 214);
+    text-transform: none;
+    font-family: cursive; 
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: justify;
+    letter-spacing: 2px;   
+    }
+
+  .title-header h1 {
+  font-size:26px; font-weight:700; letter-spacing:1px; 
+  text-transform:uppercase; 
+  width:160px; text-align:center; 
+  margin:auto; white-space:nowrap; padding-bottom:13px;
+}
+.title-header h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.title-header h1:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+  position:absolute; right:0; bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+
+  
+}
+     
+      </style>
+</head>
+<body>
+    
+    {% include "GopalPortfolio/portfolioHeader.html" %}
+
+    <div class="title-header">
+      <h1>About</h1>
+    </div>
+  </br>
+
+    <div class="about-paragraph" >
+      <p>I am a Gopal Jha, I have completed my Bachelor of Engineering in the department of Electronics And Telecommunication from University of Mumbai in 2022. </p>
+      <p>I enjoy solving technical problems, researching and developing new technologies, designing software applications for different platforms. </p>  
+      <p>Passionate about implementing and launching new projects. Ability to translate business requirements into technical solutions.</p>
+      </div>
+
+    <!-- <div class="body-height">
+    </div> -->
+  </br> </br> </br>
+
+
+    {% include "GopalPortfolio/PortfolioFooter.html" %}
+</body>
+</html>

@@ -1,0 +1,63 @@
+{% load bootstrap3 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+       .body-height{
+        height: 190px;
+      }
+      button:hover{
+            opacity:0.7;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    {% include 'basic/header.html' %}  
+
+  <div class="body-height">
+    {% block content %}
+  <b><h2>Sign up here to access the Creation</h2></b>
+  
+  <form method="post" class = "sign-up-form">
+    {% csrf_token %}
+    
+    
+    <b>{% for field in form %}</b>
+      <b>
+        <p>
+            
+            <b>{{ field.label_tag }}</b>
+            <b>{{ field }}</b>
+            <b>{% if field.help_text %}</b>
+              <!-- <small style="display: none">{{ field.help_text }}</small> -->
+            {% endif %}
+            {% for error in field.errors %}
+              <p style="color: red">{{ error }}</p>
+            {% endfor %}
+          </p>
+      </b>
+      
+      {% endfor %}
+      
+    <b><button type="submit">Sign up</button> </b>
+  </form>
+{% endblock %}
+
+  </div>
+
+  
+
+{% include "basic/footer.html" %}
+</body>
+</html>

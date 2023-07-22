@@ -1,0 +1,911 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio About</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <style>
+        /* Default body height to keep footer at bottom of page */
+        /* .body-height{
+          height: 50px;
+        } */
+        body{
+          background-color: rgba(73, 73, 79, 0.098);
+        }
+
+/* === BASE HEADING === */ 
+
+h1 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+
+h2:before {
+    content: '\2016';
+    margin:0 10px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+
+  
+  .about-paragraph {
+    color: rgb(8, 8, 214);
+    text-transform: none;
+    font-family: cursive; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: justify;
+    letter-spacing: 2px;   
+    }
+
+  .title-header h1 {
+  font-size:26px; font-weight:700; letter-spacing:1px; 
+  text-transform:uppercase; 
+  width:160px; text-align:center; 
+  margin:auto; white-space:nowrap; padding-bottom:13px;
+}
+.title-header h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.title-header h1:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+  position:absolute; right:0; bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+img{
+    transition: transform .7s;
+    background-color: rgba(173, 173, 237, 0.239);
+    border-radius: 1px;
+    border: 1px solid black;
+    margin-left: 10px;
+    width:50px;
+    height:50px;
+}
+
+.image-column {
+  position: relative;
+  transition: transform .7s;
+  width: 25%;
+  padding: 15px; /* Distance between image-row  */
+  float: left;
+}
+.image-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.text-image-overlay {
+  position: absolute; 
+  bottom: 0; 
+  transition: .1s ease;
+  opacity:0;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: 10px;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+.image-column:hover{
+  transform:scale(1.2);  
+}
+
+.image-column:hover .text-image-overlay {
+  opacity: 1;
+}
+
+.image-column:hover .image {
+  opacity: 0.8;
+}
+.image-column:hover .text {
+  opacity: 1;
+}
+
+.projects h1 {
+  margin-left: 10px;
+  padding-top: 30px;
+	font-size: 25px;
+	font-family: cursive;
+  color: rgb(68, 0, 255); 
+  font-weight: bold;
+}
+.projects h2 {
+  margin-left: 20px;
+  padding-top: 4px;
+	font-size: 25px;
+	font-family: cursive;
+  color: rgba(68, 0, 255, 0.804);
+  font-weight: bold;
+}
+.projects h3 {
+  margin-left: 30px;
+  padding-top: 1px;
+	font-size: 23px;
+	font-family: cursive;
+  color: rgba(68, 0, 255, 0.701);
+}
+
+.projects p {
+  margin-left: 45px;
+  font-size: 19px; 
+}
+
+.resume-viewer {
+    width: 65vh;
+    height: 100vh;
+    position: relative;
+    margin-left: 4%;
+}
+iframe {
+    width: 55vh;
+    height: 80vh;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  .about-paragraph {
+    color: rgb(8, 8, 214);
+    text-transform: none;
+    font-family: cursive; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: justify;
+    letter-spacing: 2px;   
+    }
+
+  .title-header h1 {
+  font-size:26px; font-weight:700; letter-spacing:1px; 
+  text-transform:uppercase; 
+  width:160px; text-align:center; 
+  margin:auto; white-space:nowrap; padding-bottom:13px;
+}
+.title-header h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.title-header h1:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    position:absolute; right:0; bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+img{
+    transition: transform .7s;
+    background-color: rgba(173, 173, 237, 0.239);
+    border-radius: 10px;
+    border: 5px solid black;
+    margin-left: 20px;
+    width:100px;
+    height:100px;
+}
+
+.image-column {
+  position: relative;
+  transition: transform .7s;
+  width: 25%;
+  padding: 15px; /* Distance between image-row  */
+  float: left;
+}
+.image-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.text-image-overlay {
+  position: absolute; 
+  bottom: 0; 
+  transition: .1s ease;
+  opacity:0;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px;
+  margin-left: 30px;
+}
+
+.image-column:hover{
+  transform:scale(1.2);  
+}
+
+.image-column:hover .text-image-overlay {
+  opacity: 1;
+}
+
+.image-column:hover .image {
+  opacity: 0.8;
+}
+.image-column:hover .text {
+  opacity: 1;
+}
+
+.projects h1 {
+  margin-left: 10px;
+  padding-top: 30px;
+	font-size: 25px;
+	font-family: cursive;
+  color: rgb(68, 0, 255); 
+  font-weight: bold;
+}
+.projects h2 {
+  margin-left: 20px;
+  padding-top: 4px;
+	font-size: 25px;
+	font-family: cursive;
+  color: rgba(68, 0, 255, 0.804);
+  font-weight: bold;
+}
+.projects h3 {
+  margin-left: 30px;
+  padding-top: 1px;
+	font-size: 23px;
+	font-family: cursive;
+  color: rgba(68, 0, 255, 0.701);
+}
+
+.projects p {
+  margin-left: 45px;
+  font-size: 19px; 
+}
+
+.resume-viewer {
+    width: 70vh;
+    height: 100vh;
+    position: relative;
+    margin-left: 4%;
+}
+iframe {
+    width: 60vh;
+    height: 85vh;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .about-paragraph {
+    color: rgb(8, 8, 214);
+    text-transform: none;
+    font-family: cursive; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: justify;
+    letter-spacing: 2px;   
+    }
+
+  .title-header h1 {
+  font-size:26px; font-weight:700; letter-spacing:1px; 
+  text-transform:uppercase; 
+  width:160px; text-align:center; 
+  margin:auto; white-space:nowrap; padding-bottom:13px;
+}
+.title-header h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.title-header h1:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    position:absolute; right:0; bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+img{
+    transition: transform .7s;
+    background-color: rgba(173, 173, 237, 0.239);
+    border-radius: 10px;
+    border: 5px solid black;
+    margin-left: 25px;
+    width:130px;
+    height:130px;
+}
+
+.image-column {
+  position: relative;
+  transition: transform .7s;
+  width: 25%;
+  padding: 15px; /* Distance between image-row  */
+  float: left;
+}
+.image-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.text-image-overlay {
+  position: absolute; 
+  bottom: 0; 
+  transition: .1s ease;
+  opacity:0;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px;
+  margin-left: 30px;
+}
+
+.image-column:hover{
+  transform:scale(1.2);  
+}
+
+.image-column:hover .text-image-overlay {
+  opacity: 1;
+}
+
+.image-column:hover .image {
+  opacity: 0.8;
+}
+.image-column:hover .text {
+  opacity: 1;
+}
+
+.projects h1 {
+  margin-left: 10px;
+  padding-top: 30px;
+	font-size: 25px;
+	font-family: cursive;
+  color: rgb(68, 0, 255); 
+  font-weight: bold;
+}
+.projects h2 {
+  margin-left: 20px;
+  padding-top: 4px;
+	font-size: 25px;
+	font-family: cursive;
+  color: rgba(68, 0, 255, 0.804);
+  font-weight: bold;
+}
+.projects h3 {
+  margin-left: 30px;
+  padding-top: 1px;
+	font-size: 23px;
+	font-family: cursive;
+  color: rgba(68, 0, 255, 0.701);
+}
+
+.projects p {
+  margin-left: 45px;
+  font-size: 19px; 
+}
+
+.resume-viewer {
+    width: 110vh;
+    height: 120vh;
+    position: relative;
+    margin-left: 6%;
+}
+iframe {
+    width: 75vh;
+    height: 100vh;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+  
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .about-paragraph {
+    color: rgb(8, 8, 214);
+    text-transform: none;
+    font-family: cursive; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: justify;
+    letter-spacing: 2px;   
+    }
+
+  .title-header h1 {
+  font-size:26px; font-weight:700; letter-spacing:1px; 
+  text-transform:uppercase; 
+  width:160px; text-align:center; 
+  margin:auto; white-space:nowrap; padding-bottom:13px;
+}
+.title-header h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.title-header h1:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    position:absolute; right:0; bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+img{
+    transition: transform .7s;
+    background-color: rgba(173, 173, 237, 0.239);
+    border-radius: 10px;
+    border: 5px solid black;
+    margin-left: 20px;
+    width:150px;
+    height:150px;
+}
+
+.image-column {
+  position: relative;
+  transition: transform .7s;
+  width: 25%;
+  padding: 15px; /* Distance between image-row  */
+  float: left;
+}
+.image-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.text-image-overlay {
+  position: absolute; 
+  bottom: 0; 
+  transition: .1s ease;
+  opacity:0;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 30px;
+}
+
+.image-column:hover{
+  transform:scale(1.2);  
+}
+
+.image-column:hover .text-image-overlay {
+  opacity: 1;
+}
+
+.image-column:hover .image {
+  opacity: 0.8;
+}
+.image-column:hover .text {
+  opacity: 1;
+}
+
+.projects h1 {
+  margin-left: 10px;
+  padding-top: 30px;
+	font-size: 25px;
+	font-family: cursive;
+  color: rgb(68, 0, 255); 
+  font-weight: bold;
+}
+.projects h2 {
+  margin-left: 20px;
+  padding-top: 4px;
+	font-size: 25px;
+	font-family: cursive;
+  color: rgba(68, 0, 255, 0.804);
+  font-weight: bold;
+}
+.projects h3 {
+  margin-left: 30px;
+  padding-top: 1px;
+	font-size: 23px;
+	font-family: cursive;
+  color: rgba(68, 0, 255, 0.701);
+}
+
+.projects p {
+  margin-left: 45px;
+  font-size: 19px; 
+}
+
+.resume-viewer {
+    width: 110vh;
+    height: 120vh;
+    /* padding-bottom: 56%;  */
+    position: relative;
+    margin-left: 15%;
+}
+iframe {
+    width: 75vh;
+    height: 100vh;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+  
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  img{
+    transition: transform .7s;
+    background-color: rgba(173, 173, 237, 0.239);
+    border-radius: 10px;
+    border: 5px solid black;
+    margin-left: 40px;
+    width:150px;
+    height:150px;
+}
+
+
+  .about-paragraph {
+    color: rgb(8, 8, 214);
+    text-transform: none;
+    font-family: cursive; 
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: justify;
+    letter-spacing: 2px;   
+    }
+
+  .title-header h1 {
+  font-size:26px; font-weight:700; letter-spacing:1px; 
+  text-transform:uppercase; 
+  width:160px; text-align:center; 
+  margin:auto; white-space:nowrap; padding-bottom:13px;
+}
+.title-header h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.title-header h1:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+  position:absolute; right:0; bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+.image-column {
+  position: relative;
+  transition: transform .7s;
+  width: 25%;
+  padding: 15px; /* Distance between image-row  */
+  float: left;
+}
+.image-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.text-image-overlay {
+  position: absolute; 
+  bottom: 0; 
+  transition: .1s ease;
+  opacity:0;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: 25px;
+  padding: 5px;
+  margin-left: 55px;
+}
+
+.image-column:hover{
+  transform:scale(1.2);  
+}
+
+.image-column:hover .text-image-overlay {
+  opacity: 1;
+}
+
+.image-column:hover .image {
+  opacity: 0.8;
+}
+.image-column:hover .text {
+  opacity: 1;
+}
+
+.projects h1 {
+  margin-left: 10px;
+  padding-top: 30px;
+	font-size: 25px;
+	font-family: cursive;
+  color: rgb(68, 0, 255); 
+  font-weight: bold;
+}
+.projects h2 {
+  margin-left: 20px;
+  padding-top: 4px;
+	font-size: 25px;
+	font-family: cursive;
+  color: rgba(68, 0, 255, 0.804);
+  font-weight: bold;
+}
+.projects h3 {
+  margin-left: 30px;
+  padding-top: 1px;
+	font-size: 23px;
+	font-family: cursive;
+  color: rgba(68, 0, 255, 0.701);
+}
+
+.projects p {
+  margin-left: 45px;
+  font-size: 19px; 
+}
+
+.resume-viewer {
+    width: 120vh;
+    height: 140vh;
+    /* padding-bottom: 56%;  */
+    position: relative;
+    margin-left: 25%;
+}
+iframe {
+    width: 100vh;
+    height: 140vh;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+  
+}
+     
+      </style>
+</head>
+<body>
+    
+    {% include "GopalPortfolio/portfolioHeader.html" %}
+
+    <div class="title-header">
+      <h1>About</h1>
+    </div>
+  </br>
+
+    <div class="about-paragraph" >
+      <p>I am a Gopal Jha, I have completed my Bachelor of Engineering in the department of Electronics And Telecommunication from University of Mumbai in 2022. </p>
+      <p>I enjoy solving technical problems, researching and developing new technologies, designing software applications for different platforms. </p>  
+      <p>Passionate about implementing and launching new projects. Ability to translate business requirements into technical solutions.</p>
+      </div>
+
+    <!-- <div class="body-height">
+    </div> -->
+  </br> </br> </br>
+
+    <div class="title-header">
+      <h1>Skills</h1>
+    </div>
+  </br>
+
+    <div class="image-row">
+      <div class="image-column">
+        <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png"> <!-- Java -->
+        <div class="text-image-overlay">
+          <p>Java</p>
+        </div>
+      </div>
+  
+      <div class="image-column">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Python_logo_01.svg/800px-Python_logo_01.svg.png"> <!-- Python -->
+        <div class="text-image-overlay">
+          <p>Python</p>
+        </div>
+      </div>
+      
+      <div class="image-column">
+        <img src="https://seeklogo.com/images/D/django-logo-4C5ECF7036-seeklogo.com.png"> <!-- Django -->
+        <div class="text-image-overlay">
+          <p>Django</p>
+        </div>
+      </div>
+  
+      <div class="image-column">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968313.png"> <!-- MySQL -->
+        <div class="text-image-overlay">
+          <p>MySQL</p>
+        </div>
+      </div>
+      <!-- End of java to MySQL -->
+  
+      <div class="image-column">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/512px-HTML5_Badge.svg.png?20110131171049"> <!-- HTML -->
+        <div class="text-image-overlay">
+          <p>HTML</p>
+        </div>
+      </div>
+  
+      <div class="image-column">
+        <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817"> <!-- CSS -->
+        <div class="text-image-overlay">
+          <p>CSS</p>
+        </div>
+      </div>
+      
+      <div class="image-column">
+        <img src = "https://w1.pngwing.com/pngs/951/574/png-transparent-react-logo-javascript-redux-vuejs-angular-angularjs-expressjs-front-and-back-ends-thumbnail.png"> <!-- JS -->
+        <div class="text-image-overlay">
+          <p>Javascript</p>
+        </div>
+      </div>
+  
+      <div class="image-column">
+        <img src = "https://img.favpng.com/25/1/22/microsoft-sql-server-database-microsoft-corporation-application-software-png-favpng-vTJVuHCzMsyVhv07AjTXMqwh7.jpg"> <!-- MS SQL -->
+        <div class="text-image-overlay">
+          <p>MsSQL</p>
+        </div>
+      </div>
+      <!-- End of MS SQL -->
+      <div class="image-column">
+        <img src = "https://upload.wikimedia.org/wikipedia/commons/d/dd/Linux_logo.jpg"> <!-- Linux -->
+        <div class="text-image-overlay">
+          <p>Linux</p>
+        </div>
+      </div>
+  
+      <div class="image-column">
+        <img src = "https://cdn.iconscout.com/icon/free/png-256/free-react-1-282599.png?f=webp"> <!-- React -->
+        <div class="text-image-overlay">
+          <p>React</p>
+        </div>
+      </div>
+      
+      <div class="image-column">
+        <img src = "https://www.stackery.io/assets/images/posts/redis-cache-cluster-support/featured.svg"> <!-- Redis -->
+        <div class="text-image-overlay">
+          <p>Redis</p>
+        </div>
+      </div>
+  
+      <div class="image-column">
+        <img src = "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png"> <!-- SQL -->
+        <div class="text-image-overlay">
+          <p>SQL</p>
+        </div>
+      </div>
+      <!-- end of SQL -->
+  
+      <div class="image-column">
+        <img src = "https://cdn.freebiesupply.com/logos/large/2x/eclipse-11-logo-png-transparent.png"> <!-- Eclipse -->
+        <div class="text-image-overlay">
+          <p>Eclipse</p>
+        </div>
+      </div>
+      
+      <div class="image-column">
+        <img src = "https://seeklogo.com/images/V/visual-studio-code-logo-284BC24C39-seeklogo.com.png"> <!-- VS Code -->
+        <div class="text-image-overlay">
+          <p>VS Code</p>
+        </div>
+      </div>
+      
+      <div class="image-column">
+        <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/512px-IntelliJ_IDEA_Icon.svg.png?20200803071016"> <!-- IntelliJ -->
+        <div class="text-image-overlay">
+          <p>IntelliJ</p>
+        </div>
+      </div>
+      
+      <div class="image-column">
+        <img src = "https://static.vecteezy.com/system/resources/previews/014/018/577/non_2x/ms-office-logo-on-transparent-background-free-vector.jpg"> <!-- MS Office -->
+        <div class="text-image-overlay">
+          <p>MS Office</p>
+        </div>
+      </div>
+  </div>
+
+</br> </br> </br>
+
+<div class="title-header">
+  <h1>Projects</h1>
+</div>
+</br>
+
+<div class = "projects">
+<h1>Below are the projects I made. </h1>
+
+<h2>Final Year Project (B.E)</h2>
+<h3>▪ Smuggling Control of Trees Using Raspberry pi.</h3>
+<p>▪ IOT, Computer Vision technology-based system to provide a solution to stop poaching or smuggling of trees.</p> 
+<p>Real-time data/ images were stored on Firebase Cloud for to display data, Images on Django based website.</p>
+
+<h3>▪ Online Library Portal Using Django (SDP).</h3>
+<p>▪ Developed a website to manage the details of the students, books and the issued books efficiently.</p>
+<p>Technology used: Django, HTML, CSS, Bootstrap, MySQL.</p>
+
+
+<h2>Final Year Project (Diploma)</h2>
+<h3>▪ Arduino & GSM Based Fire Rescue System.</h3>
+<p>▪ IOT based system to detect flame and alert the user through PA system and send SMS through GSM to predefined numbers.</p> 
+<p>The system is smart enough to use motor and sprinklers to take action against Fire.
+</p>
+</div>
+  
+
+</br> </br>
+
+<div class="title-header">
+  <h1>Resume</h1>
+</div>
+</br>
+
+  <div class = "resume-viewer">
+    <!-- <img src="{% static 'GopalPortfolio/Resume_GopalJha.jpg' %}" width="993" height="1404"> -->
+    <!-- pdf -->
+    <iframe src="https://drive.google.com/file/d/1g1rpnPnXLFRg2O7VBDuCL3vPWxNK3TXq/preview" allow="autoplay"></iframe> 
+  </div>
+    
+
+    {% include "GopalPortfolio/PortfolioFooter.html" %}
+</body>
+</html>
